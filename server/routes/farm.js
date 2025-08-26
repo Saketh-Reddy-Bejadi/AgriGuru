@@ -26,7 +26,7 @@ router.post("/", authenticateToken, async (req, res) => {
     let address = "";
     try {
       const geoRes = await axios.get(
-        `https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}&api_key=6870e60f62712223379840crwa8418f`
+        `https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}&api_key=${GEOCODE_API_KEY}`
       );
       console.log(geoRes);
       address = geoRes.data.display_name || geoRes.data.address?.label || "";
