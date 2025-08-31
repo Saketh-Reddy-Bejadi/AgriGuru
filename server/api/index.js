@@ -10,7 +10,11 @@ const marketRoutes = require("../routes/market");
 const connectDB = require("../config/db");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://agri-guruu.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 connectDB();
 app.get("/", (req, res) => {

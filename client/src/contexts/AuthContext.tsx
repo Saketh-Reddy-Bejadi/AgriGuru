@@ -51,7 +51,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false); // Changed from true to false
 
-  const API_BASE_URL = "https://238415b7-82c1-4afe-95f0-2bd994002e2c-00-1wq4b1gkunv7w.sisko.replit.dev/api";
+  const API_BASE_URL = `${import.meta.env.VITE_BASE_URL}`;
 
   useEffect(() => {
     const storedToken = localStorage.getItem("agriguru_token");

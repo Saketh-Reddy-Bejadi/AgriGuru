@@ -1,6 +1,6 @@
 // Commented out real API service, using mock data for development
 
-const API_BASE_URL = "https://238415b7-82c1-4afe-95f0-2bd994002e2c-00-1wq4b1gkunv7w.sisko.replit.dev/api";
+const API_BASE_URL = import.meta.env.VITE_BASE_URL;
 
 interface Farm {
   _id: string;
